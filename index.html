@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SimplyMusic</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header id="page-top"></header>
+    <div class="navigation-bar">
+        <a href ="index.html">Home</a>
+        <form action="/action_page.php">
+            <label for="cars">Filter:</label>
+            <select id="filter-drop-down" name="filter-drop-down">
+              <option value="title">Title</option>
+              <option value="artist">Artist</option>
+              <option value="length">Length</option>
+              <option value="genre">Genre</option>
+            </select>
+            <input type="submit">
+          </form>
+    </div>
+    <div class = 'main-container'>
+        <table id="table-top">
+            <div>
+                <tr>                   
+                    <th><!--empty cell--></th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Length</th>
+                </tr>
+            </div>
+            <div class="songData">
+            </div>
+        </table>
+    </div>
+
+    <script src="/js/home.js"></script>
+</body>
+</html>
