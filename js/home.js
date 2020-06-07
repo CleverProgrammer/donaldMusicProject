@@ -7,6 +7,7 @@
  *
  */
 
+ // Figure how to move juration into it's own file
 (function() {
 
   var UNITS = {
@@ -214,10 +215,6 @@
 
 
 
-
-
-
-
 let songs = [
     {'title': 'Dirty','artist': 'Me','length': 112, 'location': new Audio('audio/dirty.wav'),}, //song1
     {'title': 'SnakeBit','artist': 'Me','length': 158, 'location': new Audio('audio/Snakebit.wav'),}, //song2
@@ -317,6 +314,16 @@ function playSongFour() {
     songs[3].location.play();
 }
 
+// Qazi function for PlaySong
+// playSong(0)
+// playSong(1)
+function playSong(songIndex) {
+  songs[songIndex].location.play();
+}
+
+
+
+
 //Pause functions (Again, is there a better way?)
 function pauseSongOne() {
     songs[0].location.pause();
@@ -335,15 +342,19 @@ function pauseSongFour() {
 }
 
 // EventListeners for all my buttons
+// Turn this into ONE for loop
 allButtons[0].addEventListener('click', playSongOne);
 allButtons[2].addEventListener('click', playSongTwo);
 allButtons[4].addEventListener('click', playSongThree);
 allButtons[6].addEventListener('click', playSongFour);
 
+// Turn this into ONE for loop
 allButtons[1].addEventListener('click', pauseSongOne);
 allButtons[3].addEventListener('click', pauseSongTwo);
 allButtons[5].addEventListener('click', pauseSongThree);
 allButtons[7].addEventListener('click', pauseSongFour);
+
+// allButtons[index].addEventListener('click', playSong(index))
 
 
 
